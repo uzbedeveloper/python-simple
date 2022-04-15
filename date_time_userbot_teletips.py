@@ -30,7 +30,7 @@ async def main_teletips():
                 Quotes_teletips = random.choice(quotes_teletips)
                 Emojis_teletips = random.choice(emojis_teletips)
                 TimeZone_teletips = datetime.datetime.now(pytz.timezone(f"{Time_Zone}"))
-                Time_teletips = TimeZone_teletips.strftime(" %I:%M:%S")
+                Time_teletips = TimeZone_teletips.strftime("%I:%M:%S")
                 Date_teletips = TimeZone_teletips.strftime("%d.%m.%Y") 
                 Image_teletips = Image.open("image.jpg")
                 Image_font_teletips = ImageFont.truetype("ds-digit.ttf", 360)
