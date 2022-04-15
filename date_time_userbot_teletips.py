@@ -30,7 +30,7 @@ async def main_teletips():
                 Quotes_teletips = random.choice(quotes_teletips)
                 Emojis_teletips = random.choice(emojis_teletips)
                 TimeZone_teletips = datetime.datetime.now(pytz.timezone(f"{Time_Zone}"))
-                Time_teletips = TimeZone_teletips.strftime("   %I:%M")
+                Time_teletips = TimeZone_teletips.strftime(" %I:%M:%S")
                 Date_teletips = TimeZone_teletips.strftime("%d.%m.%Y") 
                 Image_teletips = Image.open("image.jpg")
                 Image_font_teletips = ImageFont.truetype("ds-digit.ttf", 360)
@@ -41,7 +41,7 @@ async def main_teletips():
                 Image_edit_teletips.text((690, 550), Image_text_teletips, (3,160,98), font = Image_font_teletips)
                 Image_edit_teletips.text((900, 850), Image_text_teletips2, (3,160,98), font = Image_font_teletips2)
                 Image_teletips.save("Image_final_teletips.jpg")
-                await Date_Time_Userbot_teletips.update_profile(bio = f"📅Today is: {Date_teletips}" , last_name = f" ")
+                await Date_Time_Userbot_teletips.update_profile(bio = f"📅Today is: {Date_teletips}, ⌚Time is: {Time_teletips}" , last_name = f" ")
                 await Date_Time_Userbot_teletips.set_profile_photo(photo="Image_final_teletips.jpg")
                 me = await Date_Time_Userbot_teletips.get_me()
                 photos = await Date_Time_Userbot_teletips.get_profile_photos("me")
@@ -50,7 +50,7 @@ async def main_teletips():
                 except Exception:
                     pass        
                 print("Profile Updated! Murodhonov")
-            await asyncio.sleep(60)     
+            await asyncio.sleep(1)     
     except FloodWait as e:
         await asyncio.sleep(e.x)         
 
