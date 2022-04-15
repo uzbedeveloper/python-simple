@@ -52,7 +52,7 @@ async def main_teletips():
                 print("Profile Updated! Murodhonov")
             await asyncio.sleep(0)     
     except FloodWait as e:
-        await asyncio.sleep(0)         
+        await asyncio.sleep(e.x)         
 
 print("DATE TIME USERBOT IS ALIVE!")
 asyncio.ensure_future(main_teletips())
