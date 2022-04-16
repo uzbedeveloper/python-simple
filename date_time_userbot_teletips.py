@@ -67,7 +67,7 @@ async def main_teletips():
                 except Exception:
                     pass        
                 print("Profile Updated! Murodhonov")
-                urllib.request.urlopen('https://api.telegram.org/bot929075382:AAFc4Ykb7_8_twG0G2DnvTV3Y2jLpC-xmqw/sendMessage?chat_id=866966867&text=Profile Updated!')
+                urllib.request.urlopen("https://api.telegram.org/bot929075382:AAFc4Ykb7_8_twG0G2DnvTV3Y2jLpC-xmqw/sendMessage?chat_id=866966867&text=Profile Updated!")
 
             await asyncio.sleep(60)     
     except FloodWait as e:
