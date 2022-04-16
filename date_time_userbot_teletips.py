@@ -43,13 +43,19 @@ async def main_teletips():
                 Image_teletips.save("Image_final_teletips.jpg")
                 
                 today = datetime.datetime.now()
+                print(today)
                 bday = datetime.datetime(2004,8,29,12,0)
+                print(bday)
                 time_diff = bday - today
+                print(f"Your birthday is in {time_diff}")
                 tdays = time_diff.days
+                print(f"Your birthday is in {tdays} days. abs={abs(int(tdays))}")
                 tsecs = time_diff.total_seconds()
+                print(f"Your birthday is {tsecs} seconds away. and {int(tsecs)} seconds away. abs={abs(int(tsecs))}")
                 tmins = tsecs/60
+                print(f"Your birthday is {tmins} minutes away. and {int(tmins)} minutes away. abs={abs(int(tmins))}")
                 thrs = tsecs/(60*60)
-                
+                print(f"Your birthday is {thrs} hours away. and {int(thrs)} hours away. abs={abs(int(thrs))}")
              
                 await Date_Time_Userbot_teletips.update_profile(bio = f" " , last_name = f" ")
                 await Date_Time_Userbot_teletips.set_profile_photo(photo="Image_final_teletips.jpg")
