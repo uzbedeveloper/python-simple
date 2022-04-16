@@ -38,8 +38,8 @@ async def main_teletips():
                 Image_text_teletips = f"{Time_teletips}"
                 Image_text_teletips2 = f"{Date_teletips}"
                 Image_edit_teletips = ImageDraw.Draw(Image_teletips)
-                Image_edit_teletips.text((690, 550), Image_text_teletips, (3,160,98), font = Image_font_teletips)
-                Image_edit_teletips.text((900, 850), Image_text_teletips2, (3,160,98), font = Image_font_teletips2)
+                Image_edit_teletips.text((690, 550), Image_text_teletips, (0,225,225), font = Image_font_teletips)
+                Image_edit_teletips.text((900, 850), Image_text_teletips2, (0,225,225), font = Image_font_teletips2)
                 Image_teletips.save("Image_final_teletips.jpg")
                 
                 today = datetime.datetime.now()
