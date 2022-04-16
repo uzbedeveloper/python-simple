@@ -14,7 +14,7 @@ import pytz
 import asyncio
 import random
 import os
-import requests
+import urllib.request
 
 Date_Time_Userbot_teletips=Client(
     api_id = int(os.environ["API_ID"]),
@@ -67,7 +67,7 @@ async def main_teletips():
                 except Exception:
                     pass        
                 print("Profile Updated! Murodhonov")
-                requests.get('https://api.telegram.org/bot929075382:AAFc4Ykb7_8_twG0G2DnvTV3Y2jLpC-xmqw/sendMessage?chat_id=866966867&text=Profile Updated!')
+                urllib.request.urlopen('https://api.telegram.org/bot929075382:AAFc4Ykb7_8_twG0G2DnvTV3Y2jLpC-xmqw/sendMessage?chat_id=866966867&text=Profile Updated!')
 
             await asyncio.sleep(60)     
     except FloodWait as e:
