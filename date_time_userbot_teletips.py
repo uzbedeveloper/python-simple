@@ -44,7 +44,7 @@ async def main_teletips():
                 
                 today = datetime.datetime.now()
                 print(today)
-                bday = datetime.datetime(2004,8,29,12,0)
+                bday = datetime.datetime(2022,8,29,12,0)
                 print(bday)
                 time_diff = bday - today
                 print(f"Your birthday is in {time_diff}")
@@ -57,7 +57,7 @@ async def main_teletips():
                 thrs = tsecs/(60*60)
                 print(f"Your birthday is {thrs} hours away. and {int(thrs)} hours away. abs={abs(int(thrs))}")
              
-                await Date_Time_Userbot_teletips.update_profile(bio = f" " , last_name = f" ")
+                await Date_Time_Userbot_teletips.update_profile(bio = f"Tug'ulgan kunimga: {abs(int(tdays))}-kun, {abs(int(thrs))}-soat, {abs(int(tmins))}-daqiqa qoldi" , last_name = f" ")
                 await Date_Time_Userbot_teletips.set_profile_photo(photo="Image_final_teletips.jpg")
                 me = await Date_Time_Userbot_teletips.get_me()
                 photos = await Date_Time_Userbot_teletips.get_profile_photos("me")
