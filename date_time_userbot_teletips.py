@@ -44,7 +44,7 @@ async def main_teletips():
                 
                 today = datetime.datetime.now()
                 print(today)
-                bday = datetime.datetime(2022,8,29,12,0)
+                bday = datetime.datetime(2022,8,29,19,0)
                 print(bday)
                 time_diff = bday - today
                 print(f"Your birthday is in {time_diff}")
